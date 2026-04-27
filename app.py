@@ -338,7 +338,7 @@ if "df_out" in st.session_state:
     st.dataframe(
         df_view[display_cols].style
             .format({"CONFIANCA": "{:.2f}"})
-            .applymap(color_confianca, subset=["CONFIANCA"]),
+            .map(color_confianca, subset=["CONFIANCA"]),
         use_container_width=True,
         height=420,
     )
